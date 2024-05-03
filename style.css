@@ -16,15 +16,28 @@
     :root { font-family: InterVariable, sans-serif; }
   }
 
+/* GENERAL MARGINS */
+body {
+margin: 0 1em;
+}
 
 /* PERSISTENT HEADER */
+.white-space {
+    position: sticky;
+    top: 0;
+    height: 1em;
+    background-color: white;
+}
 .sticky-header {
+    position: sticky;
+    top: 1em;
     background-color: #1D3557;
     color: #F1FAEE;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    text-transform: uppercase;
 }
 .sticky-header > h1 {
     flex-grow: 2;
@@ -39,6 +52,8 @@
     /* NAV */
     .sticky-header > nav > a {
         text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 600;
         color: #F1FAEE;
         text-align: right;
         flex-grow: 1;
@@ -53,3 +68,10 @@
     .sticky-header > nav > .current-page {
         text-decoration: underline;
     }
+
+/* HOME CONTENT */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
