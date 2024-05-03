@@ -1,0 +1,55 @@
+/* COLORS 
+#E63946     RED
+#F1FAEE     OFF-WHITE
+#A8DADC     LIGHT-BLUE
+#457B9D     BLUE
+#1D3557     DARK-BLUE
+*/
+
+
+/* INTER FONT FAMILY */
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  }
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+  }
+
+
+/* PERSISTENT HEADER */
+.sticky-header {
+    background-color: #1D3557;
+    color: #F1FAEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+.sticky-header > h1 {
+    flex-grow: 2;
+    margin: 0;
+}
+.sticky-header > nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+    /* NAV */
+    .sticky-header > nav > a {
+        text-decoration: none;
+        color: #F1FAEE;
+        text-align: right;
+        flex-grow: 1;
+    }
+    .sticky-header > nav > a:hover {
+        text-decoration: underline;
+    }
+    .sticky-header > nav > a:active {
+        color: #E63946;
+        text-decoration: underline;
+    }
+    .sticky-header > nav > .current-page {
+        text-decoration: underline;
+    }
