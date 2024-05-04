@@ -23,9 +23,6 @@
 .about-milo > video {
     height: 200px;
 }
-.home-image > img {
-    width: 200px;
-}
 .portfolio-film > img {
     height: 300px;
 }
@@ -37,6 +34,10 @@
 body {
     margin: 0;
 }
+@media screen and (max-width:1200px) {
+    .home-main-topdiv {flex-wrap: wrap;}
+    .home-summary:first-child {flex-basis: 100%;}
+}
 
 /* HEADER */
 .sticky-header {
@@ -46,24 +47,70 @@ body {
     position: sticky;
     top: 0;
     margin: 0;
+    background-color: lightblue;
+    padding: 1em;
 }
-.sticky-header > nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20%;
-}
-    nav > a {
-        text-decoration: none;
+    .sticky-header > h1 {
+        flex-grow: 2;
+        margin: 0;
     }
-    nav > a:hover {
-        text-decoration: underline;
+    .sticky-header > nav {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        gap: 20%;
     }
-    .current-page {
-        text-decoration: underline;
-    }
+        nav > a {
+            text-decoration: none;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        .current-page {
+            text-decoration: underline;
+        }
 
 /* HOME */
-
+.home-main {
+    padding: 1em 20%;
+}
+    .home-main-topdiv {
+        display: flex;
+        gap: 3em;
+    }
+        .home-summary {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; 
+        }
+            .home-summary > article > p {
+                text-align: center;
+            }
+            .hey-im-ryan > h2 {
+                margin: 0 0 0 20%;
+            }
+            .why-am-i-here > h2 {
+                text-align: right;
+                margin: 0 20% 0 0;
+            }
+        .home-image {
+            flex: 1;
+            align-content: center;
+        }
+            .home-image > img {
+                width: 100%;
+                border-radius: 1em;
+            }
+    .home-quote {
+        text-align: center;
+        padding: 2em;
+    }
+    .home-icons {
+        display: flex;
+        justify-content: space-around;
+    }
 /* ABOUT */
 
 /* PORTFOLIO */
