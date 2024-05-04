@@ -6,7 +6,6 @@
 #1D3557     DARK-BLUE
 */
 
-
 /* INTER FONT FAMILY */
 :root {
     font-family: Inter, sans-serif;
@@ -33,6 +32,36 @@
 .portfolio-donut > img {
     height: 200px;
 }
+
+/* GENERAL */
+body {
+    margin: 0;
+}
+
+/* HEADER */
+.sticky-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin: 0;
+}
+.sticky-header > nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20%;
+}
+    nav > a {
+        text-decoration: none;
+    }
+    nav > a:hover {
+        text-decoration: underline;
+    }
+    .current-page {
+        text-decoration: underline;
+    }
+
 /* HOME */
 
 /* ABOUT */
