@@ -17,9 +17,6 @@
 
 /* TEMPORARY */
 
-.about-backpacking > img {
-    height: 200px;
-}
 .about-milo > video {
     height: 200px;
 }
@@ -37,6 +34,15 @@ body {
 @media screen and (max-width:1200px) {
     .home-main-topdiv {flex-wrap: wrap;}
     .home-summary:first-child {flex-basis: 100%;}
+    .hey-im-ryan > .hey-im-ryan-h2 {margin: 0 0 0 0; text-align: center;}
+    .why-am-i-here > .why-am-i-here-h2 {margin: 0 0 0 0; text-align: center;}
+    .about-main {gap: 2em;}
+        .about-backpacking {flex-wrap: wrap;}
+        #backpacking-gap {gap: .5em;}
+            .article-backpacking {text-align: center;}
+        .about-milo {flex-wrap: wrap; flex-direction: column-reverse; text-align: center; align-content: center;}
+        #milo-gap {gap: .5em}
+        .about-location {text-align: center;}
 }
 
 /* HEADER */
@@ -47,12 +53,14 @@ body {
     position: sticky;
     top: 0;
     margin: 0;
-    background-color: lightblue;
-    padding: 1em;
+    background-color: rgb(75, 75, 75);
+    padding: 1em 3em;
+    text-transform: uppercase;
 }
     .sticky-header > h1 {
         flex-grow: 2;
         margin: 0;
+        color: white;
     }
     .sticky-header > nav {
         display: flex;
@@ -62,13 +70,14 @@ body {
         gap: 20%;
     }
         nav > a {
+            color: rgb(165, 165, 165);
             text-decoration: none;
         }
         nav > a:hover {
-            text-decoration: underline;
+            color: white;
         }
         .current-page {
-            text-decoration: underline;
+            color: white;
         }
 
 /* HOME */
@@ -111,6 +120,29 @@ body {
         display: flex;
         justify-content: space-around;
     }
+
 /* ABOUT */
+.about-main {
+    padding: 1em 20%;
+    display: flex;
+    flex-direction: column;
+}
+    .about-backpacking {
+        display: flex;
+        justify-content: center;
+        text-align: right;
+        align-items: center;
+        gap: 3em;
+    }
+        .about-backpacking > img {
+            height: 15em;
+        }
+    .about-milo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+    }
+
 
 /* PORTFOLIO */
