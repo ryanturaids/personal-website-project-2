@@ -21,21 +21,27 @@
             </nav>
         </header>
         <main class="portfolio-main">
-            <section class="portfolio-film">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QcBNm3YDjDU?si=-bnHMdnbwYBlBIZG"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <article>
-                    <h2>Highschool Narrative Film</h2>
-                    <p>
-                        In high school I produced a narrative short film titled "Burnt Out." Its storyline follows the protagonist grappling with outrageous
-                        challenges imposed by his boss, roommate, and life itself. This relentless pressure eventually pushes him to a mental breaking point,
-                        causing him to go off the deep end. Uncoincidentally, his journey mirrors my own experience with the creative process while making
-                        the film.
-                    </p>
-                </article>
-                <img src="/src/images/film-poster.png" alt="student film poster">
-                <img src="/src/images/film-behind-the-scenes.jpg" alt="student film behind the scenes">
+            <section class="portfolio-film" id="portfolio-film-id">
+                <div class="poster-container">
+                    <img id="burnt-out-poster" src="/src/images/film-poster.png" alt="student film poster">
+                </div>
+                <div class="burnt-out">
+                    <article>
+                        <h2>High School Narrative Film</h2>
+                        <p>
+                            In high school I produced a narrative short film titled "Burnt Out." Its storyline follows the protagonist grappling with outrageous
+                            challenges imposed by his boss, roommate, and life itself. This relentless pressure eventually pushes him to a mental breaking point,
+                            causing him to go off the deep end. Uncoincidentally, his journey mirrors my own experience of the creative process while making
+                            the film.
+                        </p>
+                    </article>
+                    <div class="iframe-bts">
+                        <iframe width="272" height="153" src="https://www.youtube.com/embed/QcBNm3YDjDU?si=-bnHMdnbwYBlBIZG"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img class="behind-the-scenes" src="/src/images/film-behind-the-scenes.jpg" alt="student film behind the scenes">
+                    </div>
+                </div>
             </section>
             <section class="portfolio-donut">
                 <article>
@@ -45,9 +51,11 @@
                         the program, my donut features the equally infamous pink frosting and colored sprinkles. I'm very proud of this donut.
                     </p>
                 </article>
-                <img src="/src/images/donut-1.png" alt="3D model of donut geometry">
-                <img src="src/images/donut-2.png" alt="3D model of donut">
-                <img src="src/images/donut-3.png" alt="3D model of donut with sprinkles">
+                <div class="donut-images">
+                    <img src="/src/images/donut-1.png" alt="3D model of donut geometry">
+                    <img src="src/images/donut-2.png" alt="3D model of donut">
+                    <img src="src/images/donut-3.png" alt="3D model of donut with sprinkles">
+                </div>
             </section>
         </main>
     </body>

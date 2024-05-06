@@ -15,34 +15,31 @@
     :root { font-family: InterVariable, sans-serif; }
   }
 
-/* TEMPORARY */
-
-.about-milo > video {
-    height: 200px;
-}
-.portfolio-film > img {
-    height: 300px;
-}
-.portfolio-donut > img {
-    height: 200px;
-}
-
 /* GENERAL */
 body {
     margin: 0;
 }
 @media screen and (max-width:1200px) {
     .home-main-topdiv {flex-wrap: wrap;}
-    .home-summary:first-child {flex-basis: 100%;}
-    .hey-im-ryan > .hey-im-ryan-h2 {margin: 0 0 0 0; text-align: center;}
-    .why-am-i-here > .why-am-i-here-h2 {margin: 0 0 0 0; text-align: center;}
+        .home-summary:first-child {flex-basis: 100%;}
+            .hey-im-ryan > .hey-im-ryan-h2 {margin: 0 0 0 0; text-align: center;}
+            .why-am-i-here > .why-am-i-here-h2 {margin: 0 0 0 0; text-align: center;}
     .about-main {gap: 2em;}
         .about-backpacking {flex-wrap: wrap;}
         #backpacking-gap {gap: .5em;}
             .article-backpacking {text-align: center;}
         .about-milo {flex-wrap: wrap; flex-direction: column-reverse; text-align: center; align-content: center;}
         #milo-gap {gap: .5em}
+        .about-milo > video {height: 10em;}
         .about-location {text-align: center;}
+    .portfolio-main {align-items: center;}
+    #portfolio-film-id {flex-direction: column; align-items: center; gap: 0em;}
+        #burnt-out-poster {height: 20em; width: 15em;}
+        .burnt-out {align-items: center;} 
+            .burnt-out > article {text-align: center}
+            .iframe-bts {flex-direction: column;}
+            .burnt-out > .iframe-bts > .behind-the-scenes {width: 17em;}
+    .portfolio-donut {text-align: center;}
 }
 
 /* HEADER */
@@ -143,6 +140,52 @@ body {
         align-items: center;
         gap: 3em;
     }
+        .about-milo > video {
+            max-height: 15em;
+        }
 
 
 /* PORTFOLIO */
+.portfolio-main {
+    padding: 1em 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+    .portfolio-film {
+        display: flex;
+        gap: 2em;
+    }
+        .poster-container {
+            flex-grow: 1;
+        }
+        .poster-container > img {
+            width: 100%;
+        }
+        .portfolio-film > article {
+            flex-grow: 2;
+        }
+    .burnt-out {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+        .iframe-bts {
+            display: flex;
+            gap: 1em;
+        }
+        .iframe-bts > img {
+            width: 50%;
+        }
+
+    .donut-images {
+        display: flex;
+        gap: 1em;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+        .donut-images > img {
+            flex-grow: 1;
+            width: 30%
+        }
+        
