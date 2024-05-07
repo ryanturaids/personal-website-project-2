@@ -10,15 +10,25 @@
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-  }
-  @supports (font-variation-settings: normal) {
-    :root { font-family: InterVariable, sans-serif; }
-  }
+    }
+    @supports (font-variation-settings: normal) {
+        :root { font-family: InterVariable, sans-serif; }
+        }
 
 /* GENERAL */
+html {
+    height: 100%;
+}
 body {
     margin: 0;
+    background: linear-gradient(180deg, #E63946, #457B9D, #1D3557);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    color: white;
 }
+
+/* SMALL-SCREENS */
 @media screen and (max-width:1200px) {
     .home-main-topdiv {flex-wrap: wrap;}
         .home-summary:first-child {flex-basis: 100%;}
@@ -35,10 +45,9 @@ body {
     .portfolio-main {align-items: center;}
     #portfolio-film-id {flex-direction: column; align-items: center; gap: 0em;}
         #burnt-out-poster {height: 20em; width: 15em;}
+        .poster-container > div {width: 2em;}
         .burnt-out {align-items: center;} 
             .burnt-out > article {text-align: center}
-            .iframe-bts {flex-direction: column;}
-            .burnt-out > .iframe-bts > .behind-the-scenes {width: 17em;}
     .portfolio-donut {text-align: center;}
 }
 
@@ -50,15 +59,25 @@ body {
     position: sticky;
     top: 0;
     margin: 0;
-    background-color: rgb(75, 75, 75);
+    background-color: #1D3557;
     padding: 1em 3em;
     text-transform: uppercase;
-}
+    z-index: 999;
+    }
     .sticky-header > h1 {
         flex-grow: 2;
         margin: 0;
-        color: white;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-image: -webkit-linear-gradient(-180deg, #E63946, #457B9D, #E63946);
+        background-size: 400% 400%;
+        animation: header-gradient 30s ease infinite;
     }
+        @keyframes header-gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 50% 100%;}
+            100% {background-position: 0% 50%;}
+        }
     .sticky-header > nav {
         display: flex;
         justify-content: flex-end;
@@ -67,7 +86,7 @@ body {
         gap: 20%;
     }
         nav > a {
-            color: rgb(165, 165, 165);
+            color: #457B9D;
             text-decoration: none;
         }
         nav > a:hover {
@@ -90,6 +109,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-around; 
+            gap: 1em;
         }
             .home-summary > article > p {
                 text-align: center;
@@ -158,10 +178,26 @@ body {
     }
         .poster-container {
             flex-grow: 1;
+            display: flex;
         }
-        .poster-container > img {
-            width: 100%;
-        }
+            .poster-container > img {
+                width: 90%;
+            }
+            .poster-container > div {
+                background-color: #1D3557;
+                opacity: 50%;
+            }
+            .poster-container > div:hover {
+                opacity: 100%;
+            }
+                .poster-container > div > a > img {
+                    opacity: 50%;
+                    height: 100%;
+                    width: 100%;
+                }
+                .poster-container > div > a > img:hover {
+                    opacity: 100%;
+                }
         .portfolio-film > article {
             flex-grow: 2;
         }
@@ -170,12 +206,8 @@ body {
         flex-direction: column;
         justify-content: space-around;
     }
-        .iframe-bts {
-            display: flex;
-            gap: 1em;
-        }
-        .iframe-bts > img {
-            width: 50%;
+        .burnt-out > img {
+            width: 60%;
         }
 
     .donut-images {
