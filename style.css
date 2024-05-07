@@ -25,29 +25,33 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    color: white;
+    color: #F1FAEE;
 }
 
 /* SMALL-SCREENS */
 @media screen and (max-width:1200px) {
+    #home-main-id {padding: 1em 10%}
     .home-main-topdiv {flex-wrap: wrap;}
         .home-summary:first-child {flex-basis: 100%;}
             .hey-im-ryan > .hey-im-ryan-h2 {margin: 0 0 0 0; text-align: center;}
             .why-am-i-here > .why-am-i-here-h2 {margin: 0 0 0 0; text-align: center;}
     .about-main {gap: 2em;}
+    #about-main-id {padding: 1em 10%}
         .about-backpacking {flex-wrap: wrap;}
         #backpacking-gap {gap: .5em;}
             .article-backpacking {text-align: center;}
         .about-milo {flex-wrap: wrap; flex-direction: column-reverse; text-align: center; align-content: center;}
         #milo-gap {gap: .5em}
         .about-milo > video {height: 10em;}
-        .about-location {text-align: center;}
+        .article-location {text-align: center; margin-bottom: .5em;}
     .portfolio-main {align-items: center;}
+    #portfolio-main-id {padding: 1em 10%}
     #portfolio-film-id {flex-direction: column; align-items: center; gap: 0em;}
-        #burnt-out-poster {height: 20em; width: 15em;}
-        .poster-container > div {width: 2em;}
+        #burnt-out-poster {height: 20em; width: 15em; margin-bottom: .5em;}
+        .poster-container > div {width: 2em; margin-bottom: .5em;}
         .burnt-out {align-items: center;} 
-            .burnt-out > article {text-align: center}
+            .burnt-out > article {text-align: center; margin-bottom: .5em;}
+            .burnt-out > .behind-the-scenes {width: 100%;}
     .portfolio-donut {text-align: center;}
 }
 
@@ -69,7 +73,7 @@ body {
         margin: 0;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        background-image: -webkit-linear-gradient(-180deg, #E63946, #457B9D, #E63946);
+        background-image: -webkit-linear-gradient(-90deg, #E63946, #457B9D, #E63946);
         background-size: 400% 400%;
         animation: header-gradient 30s ease infinite;
     }
@@ -86,14 +90,20 @@ body {
         gap: 20%;
     }
         nav > a {
-            color: #457B9D;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-image: -webkit-linear-gradient(-90deg, #E63946, #457B9D, #E63946);
+            background-size: 400% 400%;
+            animation: header-gradient 30s ease infinite;
             text-decoration: none;
         }
         nav > a:hover {
-            color: white;
+            color: #F1FAEE;
+            -webkit-text-fill-color: #F1FAEE;
         }
         .current-page {
-            color: white;
+            color: #F1FAEE;
+            -webkit-text-fill-color: #F1FAEE;
         }
 
 /* HOME */
@@ -113,6 +123,11 @@ body {
         }
             .home-summary > article > p {
                 text-align: center;
+            }
+            .home-summary > article {
+                background-color: rgba(69, 123, 157, 0.2);
+                padding: 1em;
+                border-radius: 1em;
             }
             .hey-im-ryan > h2 {
                 margin: 0 0 0 20%;
@@ -137,13 +152,22 @@ body {
         display: flex;
         justify-content: space-around;
     }
+    .home-icons > a > img:hover {
+        transform: scale(1.2);
+    }
 
 /* ABOUT */
 .about-main {
     padding: 1em 20%;
     display: flex;
     flex-direction: column;
+    gap: 1em;
 }
+    .article-backpacking, .article-milo, .article-location {
+        background-color: rgba(69, 123, 157, 0.2);
+        padding: 1em;
+        border-radius: 1em;
+    }
     .about-backpacking {
         display: flex;
         justify-content: center;
@@ -153,6 +177,7 @@ body {
     }
         .about-backpacking > img {
             height: 15em;
+            border-radius: 1em;
         }
     .about-milo {
         display: flex;
@@ -162,8 +187,11 @@ body {
     }
         .about-milo > video {
             max-height: 15em;
+            border-radius: 1em;
         }
-
+    .about-location > iframe {
+        border-radius: 1em;
+    }
 
 /* PORTFOLIO */
 .portfolio-main {
@@ -198,8 +226,10 @@ body {
                 .poster-container > div > a > img:hover {
                     opacity: 100%;
                 }
-        .portfolio-film > article {
-            flex-grow: 2;
+        .burnt-out > article {
+            background-color: rgba(69, 123, 157, 0.2);
+            padding: 1em;
+            border-radius: 1em;
         }
     .burnt-out {
         display: flex;
@@ -208,8 +238,18 @@ body {
     }
         .burnt-out > img {
             width: 60%;
+            border-radius: 1em;
         }
-
+.portfolio-donut {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+    .portfolio-donut > article {
+        background-color: rgba(69, 123, 157, 0.2);
+        padding: 1em;
+        border-radius: 1em;
+    }
     .donut-images {
         display: flex;
         gap: 1em;
@@ -218,6 +258,6 @@ body {
     }
         .donut-images > img {
             flex-grow: 1;
-            width: 30%
+            width: 30%;
+            border-radius: 1em;
         }
-        
