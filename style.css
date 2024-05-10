@@ -14,8 +14,178 @@
     @supports (font-variation-settings: normal) {
         :root { font-family: InterVariable, sans-serif; }
         }
-
 /* GENERAL */
+body {
+    margin: 0;
+}
+/* HEADER */
+.persistent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    background-color: #1D3557;
+    color: #F1FAEE;
+    padding: .75rem;
+    text-transform: uppercase;
+}
+    .persistent-header > h1 {
+        flex: 1;
+        margin: 0;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+        .dropdown > img {
+            width: 2rem;
+            filter: brightness(0) saturate(100%) invert(87%) sepia(15%) saturate(128%) hue-rotate(63deg) brightness(111%) contrast(96%);
+        }
+        .nav-wrap {
+            display: none;
+            position: absolute;
+            background-color: #1D3557;
+            text-align: right;
+            right: -.75rem;
+            top: -2rem;
+            z-index: -1;
+            padding: 5rem 1rem 1rem 1rem;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+            .nav-wrap > nav > a {
+                text-decoration: none;
+                color: #F1FAEE;
+            }
+        .dropdown:hover .nav-wrap {
+            display: block;
+        }
+        .dropdown:active .nav-wrap {
+            display: block;
+        }
+/* HOME */
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px;
+    margin: 1rem 1.5rem;
+}
+    .home-intro-h2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 1em;
+        text-align: center;
+        font-size: larger;
+    }
+    .home-intro-p {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        text-align: justify;
+    }
+    .home-img {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+    }
+        .home-img > img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            object-position: 0 10%;
+            border-radius: 1rem;
+        }
+    .home-intro2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: justify;
+    }
+    .home-quote {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .home-icons {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        display: flex;
+        justify-content: space-between;
+    }
+/* ABOUT */
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem 1.5rem;
+}
+
+
+
+/* SCREEN COMPATIBILITY */
+/* iPads, Tablets */
+@media screen and (min-width: 481px) {
+
+}
+/* Small Screens, Laptops */
+@media screen and (min-width: 769px) {
+
+}
+/* Desktops, Large Screens */
+@media screen and (min-width: 1025px) {
+
+}
+/* Extra Large Screens, TVs */
+@media screen and (min-width: 1201px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+GENERAL
 html {
     height: 100%;
 }
@@ -28,7 +198,7 @@ body {
     color: #F1FAEE;
 }
 
-/* SMALL-SCREENS */
+SMALL-SCREENS
 @media screen and (max-width:1200px) {
     #home-main-id {padding: 1em 10%}
     .home-main-topdiv {flex-wrap: wrap;}
@@ -55,7 +225,7 @@ body {
     .portfolio-donut {text-align: center;}
 }
 
-/* HEADER */
+HEADER
 .sticky-header {
     display: flex;
     justify-content: space-between;
@@ -106,7 +276,7 @@ body {
             -webkit-text-fill-color: #F1FAEE;
         }
 
-/* HOME */
+HOME
 .home-main {
     padding: 1em 20%;
 }
@@ -156,7 +326,7 @@ body {
         transform: scale(1.2);
     }
 
-/* ABOUT */
+ABOUT
 .about-main {
     padding: 1em 20%;
     display: flex;
@@ -193,7 +363,7 @@ body {
         border-radius: 1em;
     }
 
-/* PORTFOLIO */
+PORTFOLIO
 .portfolio-main {
     padding: 1em 20%;
     display: flex;
@@ -261,3 +431,5 @@ body {
             width: 30%;
             border-radius: 1em;
         }
+
+*/
