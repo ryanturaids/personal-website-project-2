@@ -17,6 +17,11 @@
 /* GENERAL */
 body {
     margin: 0;
+    background: linear-gradient(180deg, #E63946, #457B9D, #1D3557);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    color: #F1FAEE;
 }
 /* HEADER */
 .persistent-header {
@@ -34,25 +39,62 @@ body {
     .persistent-header > h1 {
         flex: 1;
         margin: 0;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-image: -webkit-linear-gradient(-90deg, #E63946, #457B9D, #E63946);
+        background-size: 400% 400%;
+        animation: header-gradient 30s ease infinite;
+        z-index: 2;
     }
+        @keyframes header-gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 50% 100%;}
+            100% {background-position: 0% 50%;}
+        }
     .dropdown {
         position: relative;
         display: inline-block;
         z-index: 1;
     }
-        .dropdown > img {
-            width: 2rem;
-            filter: brightness(0) saturate(100%) invert(87%) sepia(15%) saturate(128%) hue-rotate(63deg) brightness(111%) contrast(96%);
+        .dropdown-icon {
+            display: grid;
+            width: 1.3em;
+            height: 1.3em;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         }
+            .bar {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-image: -webkit-linear-gradient(-90deg, #E63946, #457B9D, #E63946);
+                background-size: 400% 400%;
+                animation: header-gradient 30s ease infinite;
+            }
+                .bar1 {
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                }
+                .bar2 {
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
+                .bar3 {
+                    grid-row-start: 5;
+                    grid-row-end: 6;
+                }
+                .bar4 {
+                    grid-row-start: 7;
+                    grid-row-end: 8;
+                }
         .nav-wrap {
             display: none;
             position: absolute;
             background-color: #1D3557;
             text-align: right;
             right: -.75rem;
-            top: -2rem;
+            top: 2;
             z-index: -1;
-            padding: 5rem 1rem 1rem 1rem;
+            padding: 1rem 1rem 1rem 1rem;
         }
         nav {
             display: flex;
@@ -61,7 +103,15 @@ body {
         }
             .nav-wrap > nav > a {
                 text-decoration: none;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                background-image: -webkit-linear-gradient(-90deg, #E63946, #457B9D, #E63946);
+                background-size: 400% 400%;
+                animation: header-gradient 30s ease infinite;
+            }
+            .nav-wrap > nav > .current-page {
                 color: #F1FAEE;
+                -webkit-text-fill-color: #F1FAEE;
             }
         .dropdown:hover .nav-wrap {
             display: block;
@@ -243,8 +293,51 @@ body {
             .about-location-iframe > iframe {
                 border-radius: 1rem;
             }
-
-
+/* PORTFOLIO */
+.portfolio-main {
+    display: flex;
+    flex-direction: column;
+}
+    .portfolio-film {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 1rem 1.5rem;
+    }
+        .portfolio-film > h2 {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            text-align: center;
+            padding: 0 1em;
+        }
+        .portfolio-film > a {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 270px;
+            justify-self: center;
+        }
+            .poster {
+                width: 100%;
+            }
+        .portfolio-film > p {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: justify;
+        }
+        .portfolio-film > .behind-the-scenes {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            width: 270px;
+            justify-self: center;
+            border-radius: 1em;
+        }
 /* SCREEN COMPATIBILITY */
 /* iPads, Tablets */
 @media screen and (min-width: 481px) {
