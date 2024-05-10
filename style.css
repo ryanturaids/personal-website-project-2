@@ -297,11 +297,11 @@ body {
 .portfolio-main {
     display: flex;
     flex-direction: column;
+    padding: 0.5rem 1rem;
 }
     .portfolio-film {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        margin: 1rem 1.5rem;
     }
         .portfolio-film > h2 {
             grid-column-start: 1;
@@ -334,10 +334,51 @@ body {
             grid-column-end:3;
             grid-row-start: 4;
             grid-row-end: 5;
-            width: 270px;
             justify-self: center;
-            border-radius: 1em;
         }
+            .behind-the-scenes > img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+    .portfolio-donut {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.25rem;
+    }
+        .portfolio-donut > h2 {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+        .portfolio-donut > p {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .portfolio-donut > .donut1 {
+            grid-column-start: 1;
+            grid-column-end:2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .portfolio-donut > .donut2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .portfolio-donut > .donut3 {
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+            .donut-img {
+                width: 100%;
+                border-radius: 1rem;
+            }
 /* SCREEN COMPATIBILITY */
 /* iPads, Tablets */
 @media screen and (min-width: 481px) {
