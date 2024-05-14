@@ -381,6 +381,32 @@ body {
                 width: 100%;
                 border-radius: 1rem;
             }
+
+/* CONTACT */
+.contact-main {
+    display: flex;
+    height: 70vh;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .contact-main > form {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 2em;
+    }
+    .contact-main > form > label {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    #submit {
+        align-self: center;
+    }
 /* SCREEN COMPATIBILITY */
 /* iPads, Tablets */
 @media screen and (min-width: 481px) {
