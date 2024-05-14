@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <!-- LOCAL CSS AND JS LINKS -->
         <link rel="stylesheet" href="style.css">
-        <script src="javascript.js"></script>
+        <script src="javascript.js" defer></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -32,5 +32,22 @@
                 </div>
             </div>
         </header>
+        <main class="contact-main">
+            <form id="form">
+                <label for="name">
+                    <span>Name:</span>
+                    <input name="name" id="name" type="text"/>
+                </label>
+                <label for="email">
+                    <span>Email:</span>
+                    <input name="email" id="email" type="text"/>
+                </label>
+                <label for="message">
+                    <span>Message:</span>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </label>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </main>
     </body>
 </html>
