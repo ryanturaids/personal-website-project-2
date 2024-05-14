@@ -12,15 +12,62 @@
         <script src="javascript.js"></script>
     </head>
     <body>
-        <header class="sticky-header" id="persistent-header">
+        <!-- HEADER -->
+        <header class="persistent-header">
             <h1>Ryan Turaids</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="portfolio.html" class="current-page">Portfolio</a>
-            </nav>
+            <div class="dropdown">
+                <div class="dropdown-icon">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                </div>
+                <div class="nav-wrap">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html" class="current-page">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </header>
-        <main class="portfolio-main" id="portfolio-main-id">
+        <main class="portfolio-main">
+            <section class="portfolio-film">
+                <a href="https://www.youtube.com/watch?v=QcBNm3YDjDU&ab_channel=FreestyleAcademy" target="_blank">
+                    <img class="poster" src="/src/images/film-poster.png" alt="student film poster">
+                </a>
+                <h2>High School Narrative Film</h2>
+                <p>
+                    In high school I produced a narrative short film titled "Burnt Out." Its storyline follows the protagonist grappling with outrageous
+                    challenges imposed by his boss, roommate, and life itself. This relentless pressure eventually pushes him to a mental breaking point,
+                    causing him to go off the deep end. Uncoincidentally, his journey mirrors my own experience of the creative process while making
+                    the film.
+                </p>
+                <div class="behind-the-scenes">
+                    <img src="/src/images/film-behind-the-scenes.jpg" alt="student film behind the scenes">
+                </div>
+            </section>
+            <section class="portfolio-donut">
+                <h2>This One Time I Made a Donut</h2>
+                <p>
+                    My very first (and only) stab at 3D modeling; a Donut! Created in Blender, where beginners infamously make donuts to get the grips of
+                    the program, my donut features the equally infamous pink frosting and colored sprinkles. I'm very proud of this donut.
+                </p>
+                <div class="donut1">
+                    <img class="donut-img" src="/src/images/donut-1.png" alt="3D model of donut geometry">
+                </div>
+                <div class="donut2">
+                    <img class="donut-img" src="src/images/donut-2.png" alt="3D model of donut">
+                </div>
+                <div class="donut3">
+                    <img class="donut-img" src="src/images/donut-3.png" alt="3D model of donut with sprinkles">
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+        <!-- <main class="portfolio-main" id="portfolio-main-id">
             <section class="portfolio-film" id="portfolio-film-id">
                 <div class="poster-container">
                     <img id="burnt-out-poster" src="/src/images/film-poster.png" alt="student film poster">
@@ -57,6 +104,4 @@
                     <img src="src/images/donut-3.png" alt="3D model of donut with sprinkles">
                 </div>
             </section>
-        </main>
-    </body>
-</html>
+        </main> -->

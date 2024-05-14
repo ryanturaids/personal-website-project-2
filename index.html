@@ -12,14 +12,77 @@
         <script src="javascript.js"></script>
     </head>
     <body>
-        <header class="sticky-header" id="persistent-header">
+        <!-- HEADER -->
+        <header class="persistent-header">
             <h1>Ryan Turaids</h1>
-            <nav>
-                <a href="index.html" class="current-page">Home</a>
-                <a href="about.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-            </nav>
+            <div class="dropdown">
+                <div class="dropdown-icon">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                </div>
+                <div class="nav-wrap">
+                    <nav>
+                        <a href="index.html" class="current-page">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </header>
+        <main class="home-main">
+            <div class="home-intro-h2">
+                <h2>Hey, I'm Ryan!</h2>
+            </div>
+            <div class="home-intro-p">
+                <p>
+                    I used to sell closets, now I'm looking forward to building applications and websites. I've spent most my life in California
+                    along with a brief stint in Texas, and while I am a homebody I occasionally have the urge to travel and explore. I enjoy using
+                    tech but have always hated the feeling of not understanding what's under the hood. For a long time I've been looking forward
+                    peeling back the curtain!
+                </p>
+            </div>
+            <section class="home-intro2">
+                <h2>Why am I here?</h2>
+                <p>
+                    I love solving problems and making those solutions self-correcting. In my career, I've spent a lot of time automating tasks at
+                    work. When these solutions got too complicated for me I tried teaching myself better methods, but quickly hit walls when anything
+                    beyond basic algebra and Excel-functions got involved. Lacking structure and trying to learn was like trying to decipher
+                    hieroglyphics in another language. I could always figure out chunks of how something worked, but never was able to figure out how
+                    to connect it all functionally. After realizing that I find more satisfaction in building and improving systems than in using
+                    them, I want to shift my career-path entirely. This is a ground floor for me, and with work secured in this field I plan on
+                    diving fully into every area of programming and development I can wrap my mind around.
+                </p>
+            </section>
+            <div class="home-img">
+                <img src="/src/images/profile-picture.jpg" alt="profile picture">
+            </div>
+            <section class="home-quote">
+                <p><i>"We are stuck with technology when what we really want is just stuff that works."</i></p>
+                <p><i>- Douglas Adams</i></p>
+            </section>
+            <section class="home-icons">
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="/src/icons/icon-linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/" target="_blank">
+                    <img src="/src/icons/icon-github.svg" alt="Github">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="/src/icons/icon-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="src/icons/icon-instagram.svg" alt="Instagram">
+                </a>
+            </section>
+        </main>
+    </body>
+</html>
+
+
+<!--
         <main class="home-main" id="home-main-id">
             <div class="home-main-topdiv">
                 <section class="home-summary">
@@ -68,5 +131,4 @@
                 </a>
             </section>
         </main>
-    </body>
-</html>
+    -->
