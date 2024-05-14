@@ -179,7 +179,7 @@ body {
         grid-row-start: 5;
         grid-row-end: 6;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 /* ABOUT */
 .about-main {
@@ -350,12 +350,14 @@ body {
             grid-column-end:3;
             grid-row-start: 1;
             grid-row-end: 1;
+            margin-bottom: 0;
         }
         .portfolio-donut > p {
             grid-column-start: 1;
             grid-column-end:3;
             grid-row-start: 2;
             grid-row-end: 3;
+            text-align: justify;
         }
         .portfolio-donut > .donut1 {
             grid-column-start: 1;
