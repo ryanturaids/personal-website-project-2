@@ -1,0 +1,197 @@
+/* Inter Font Family */
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    }
+    @supports (font-variation-settings: normal) {
+        :root { font-family: InterVariable, sans-serif; }
+        }
+
+/* General - Light and Dark Mode */
+body {
+    margin: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
+/* Light & Dark Mode Settings */
+    --primary-color: #1f1f1f;
+    --secondary-color: #ffffff;
+    --icon-color: invert(100%);
+}
+.lightmode {
+    --primary-color: #ffffff;
+    --secondary-color: #1f1f1f;
+    --icon-color: invert(0%);
+}
+/* Light & Dark Mode Switch */
+input {
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+
+}
+    label {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        overflow: hidden;
+        width: 2.4em;
+        height: 1.4em;
+        right: 0;
+        border-radius: 1.4em;
+        background: white;
+    }
+    label:after {
+        content: "";
+        position: absolute;
+        width: 0.8em;
+        height: 0.8em;
+        border-radius: 50%;
+        top: 0.29em;
+        left: 0.6em;
+        background: var(--secondary-color);
+        box-shadow: -0.3em 0 0 0.1em var(--primary-color);
+        transition: 0.2s;
+    }
+    input:checked + label:after {
+        top: 0.25em;
+        left: 1.25em;
+        width: 0.9em;
+        height: 0.9em;
+        transition: 0.2s;
+        background: var(--primary-color);
+        box-shadow: -0.5em 0 0 0.75em var(--secondary-color);
+    }
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--primary-color);
+}
+    .headid {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5em;
+    }
+        .headpic {
+            width: 3em;
+            display: flex;
+            align-items: center;
+        }
+            .headpic > img {
+                width: 100%;
+                border-radius: 50%;
+            }
+    .headid > h1 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.8em;
+    }
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+    .dropdown-icon {
+        position: relative;
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+    }
+        .dbar {
+            position: absolute;
+            width: 1.5em;
+            height: 0.2em;
+            border-radius: 0.2em;
+            background-color: var(--secondary-color);
+        }
+            .dbar1 {
+                top: 0em;
+                height: 0.2em;
+            }
+            .dbar2 {
+                top: 0.6em;
+                height: 0.2em;
+            }
+            .dbar3 {
+                top: 1.2em;
+                height: 0.2em;
+            }
+    .nav-wrap {
+        display: none;
+        position: absolute;
+        height: 11em;
+        background-color: var(--primary-color);
+        top: 1.5em;
+        right: 0em;
+        padding: 0.5rem 0 0 0;
+    }
+        .nav-wrap > nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 1em;
+        }
+        .nav-wrap > nav > a {
+            text-decoration: none;
+            font-weight: 300;
+            color: var(--secondary-color);
+        }
+            .mode-toggle {
+                display: inline-block;
+                width: 2em;
+                height: 1.4em;
+            }
+.dropdown:hover .nav-wrap {
+    display: block;
+}
+.dropdown:active .nav-wrap {
+    display: block;
+}
+
+
+/* Screen Compatibility */
+
+/* iPads, Tablets */
+@media screen and (min-width: 481px) {
+header {
+    margin: 0 2%;
+}
+}
+/* Small Screens, Laptops */
+@media screen and (min-width: 769px) {
+header {
+    margin: 0 5%;
+}
+.dropdown-icon {
+    display: none;
+}
+.nav-wrap {
+    display: block;
+    height: auto;
+    background-color: var(--primary-color);
+    text-align: right;
+    top: -0.7em;
+    right: 0;
+    padding: 0 0 0 0;
+    overflow-x: hidden;
+}
+.nav-wrap > nav {
+    flex-direction: row;
+    gap: 3em;
+}
+}
+/* Desktops, Large Screens */
+@media screen and (min-width: 1025px) {
+
+}
+/* Extra Large Screens, TVs */
+@media screen and (min-width: 1201px) {
+
+}
