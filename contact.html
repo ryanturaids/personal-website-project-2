@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Inter Font Family -->
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <!-- Javascript -->
+        <script defer src="javascript.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Ryan Turaids</h1>
+            <nav class="dropdown">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html" class="current-page">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <main class="contact-main">
+            <form id="form">
+                <label for="name">
+                    <span>Name:</span>
+                    <input name="name" id="name" type="text"/>
+                </label>
+                <label for="email">
+                    <span>Email:</span>
+                    <input name="email" id="email" type="text"/>
+                </label>
+                <label for="message">
+                    <span>Message:</span>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </label>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>

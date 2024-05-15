@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Inter Font Family -->
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <!-- Javascript -->
+        <script defer src="javascript.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Ryan Turaids</h1>
+            <nav class="dropdown">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="current-page">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <main class="about-main">
+            <section class="card">
+                <div class="img-wrap">
+                    <img src="./src/images/backpacking.jpg"/>
+                </div>
+                <article>
+                    <h2>The Great Outdoors</h2>
+                    <p>
+                        I hate hiking and camping, but I <i>love</i> backpacking. Somehow the combination
+                        of the two negates my dislike of either. When I can I try and backpack in the
+                        redwoods of northern California, there's always a great place there to pitch a
+                        tent.
+                    </p>
+                </article>
+            </section>
+            <section class="card">
+                <div class="img-wrap">
+                    <video autoplay muted loop id="milo-video">
+                        <source src="./src/videos/milo-water.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <article>
+                    <h2>My Dog Milo</h2>
+                    <p>
+                        My dog's a strange one. He's a mix of too many things to list, and is allergic to
+                        kangaroo meat and cheese. He loves garbage and is terrified of people standing on
+                        ladders.
+                    </p>
+                </article>
+            </section>
+            <section class="card">
+                <div class="img-wrap">
+                    <img src="./src/images/mountain-view.png"/>
+                </div>
+                <article>
+                    <h2>Home Sweet Home</h2>
+                    <p>
+                        Despite living all around California I've found myself back in the same county I
+                        was born, Santa Clara. My city of Mountain View is a nice place, but it might as 
+                        well be an extension of the Google campus. You go walking the dog, and if you
+                        don't pay attention, you'll find yourself in the quad surrounded by developers.
+                    </p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
